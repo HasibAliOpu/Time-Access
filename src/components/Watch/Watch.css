@@ -1,0 +1,12 @@
+.watch-card {
+  border-radius: 10px;
+  padding: 3px;
+  background-color: aquamarine;
+}
+.watch-card img {
+  border-radius: 8px;
+  height: 350px;
+}
+.watch-card button {
+  border: none;
+}

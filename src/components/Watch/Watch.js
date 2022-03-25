@@ -3,13 +3,16 @@ import "./Watch.css";
 const Watch = ({ watch }) => {
   const { img, name, price } = watch;
   return (
-    <div class="col">
-      <div class="card h-100 bg-info p-1 watch-card">
-        <img src={img} class="card-img-top" alt="" />
-        <div class="card-body">
-          <h5 class="card-title">{name}</h5>
-          <p class="card-text">{price}</p>
+    <div className="col">
+      <div className="card h-100 watch-card">
+        <img src={img} className="card-img-top" alt="" />
+        <div className="card-body">
+          <h5>{name}</h5>
+          <p className="fs-5">Price: ৳{price}.00</p>
         </div>
+        <button className="rounded-pill mb-2">
+          <p>Add To Cart</p>
+        </button>
       </div>
     </div>
   );
