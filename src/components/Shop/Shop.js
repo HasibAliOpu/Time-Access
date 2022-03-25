@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Watch from "../Watch/Watch";
 import "./Shop.css";
 const Shop = () => {
   const [watches, setWatches] = useState([]);
@@ -10,8 +11,9 @@ const Shop = () => {
   return (
     <div className="row w-100 mx-auto">
       <div className="watch-container col-12 col-lg-9 bg-warning">
-        <h3>Watch container {watches.length}</h3>
-        {watches.map((watch) => console.log(watch))}
+        {watches.map((watch) => (
+          <Watch key={watch.id} watch={watch} />
+        ))}
       </div>
       <div className="cart-container col-12 col-lg-3 bg-info">
         <h4>Cart container</h4>
