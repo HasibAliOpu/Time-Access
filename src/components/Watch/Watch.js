@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import "./Watch.css";
-const Watch = ({ watch }) => {
+const Watch = ({ watch, addToCartHandler }) => {
   const { img, name, price } = watch;
   return (
     <div className="col">
@@ -12,7 +12,10 @@ const Watch = ({ watch }) => {
           <h5>{name}</h5>
           <p className="fs-5">Price: ৳{price}.00</p>
         </div>
-        <button className="rounded-pill mb-2">
+        <button
+          onClick={() => addToCartHandler(watch)}
+          className="rounded-pill mb-2"
+        >
           <p className="mb-0">
             Add To Cart
             <FontAwesomeIcon icon={faCartShopping} />

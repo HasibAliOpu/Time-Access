@@ -3,22 +3,45 @@ import Watch from "../Watch/Watch";
 import "./Shop.css";
 const Shop = () => {
   const [watches, setWatches] = useState([]);
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch("Watch.json")
       .then((res) => res.json())
       .then((data) => setWatches(data));
   }, []);
+  const addToCartHandler = (watch) => {
+    // console.log(watch);
+    const newCart = [...cart, watch];
+    setCart(newCart);
+  };
+
   return (
     <div className="row w-100 mx-auto">
-      <div className="watch-container col-12 col-lg-9 mb-5">
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+      <div className="watch-container col-12 col-lg-10 mb-5">
+        <div className="row row-cols-1 row-cols-md-3 g-4 mx-4 mt-1">
           {watches.map((watch) => (
-            <Watch key={watch.id} watch={watch} />
+            <Watch
+              key={watch.id}
+              watch={watch}
+              addToCartHandler={addToCartHandler}
+            />
           ))}
         </div>
       </div>
-      <div className="cart-container col-12 col-lg-3 bg-info">
-        <h4>Cart container</h4>
+      <div className="cart-container col-12 col-lg-2">
+        <div className="sticky-top border border-success p-3">
+          <h4>Selected Items</h4>
+          {cart.map((watch) => (
+            <div className="d-flex mt-2">
+              <img
+                src={watch.img}
+                className="w-25 rounded-circle me-2"
+                alt=""
+              />
+              <p>{watch.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
