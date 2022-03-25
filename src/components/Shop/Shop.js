@@ -11,9 +11,11 @@ const Shop = () => {
   return (
     <div className="row w-100 mx-auto">
       <div className="watch-container col-12 col-lg-9 bg-warning">
-        {watches.map((watch) => (
-          <Watch key={watch.id} watch={watch} />
-        ))}
+        <div className="row">
+          {watches.map((watch) => (
+            <Watch key={watch.id} watch={watch} />
+          ))}
+        </div>
       </div>
       <div className="cart-container col-12 col-lg-3 bg-info">
         <h4>Cart container</h4>
