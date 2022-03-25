@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import "./Watch.css";
 const Watch = ({ watch }) => {
@@ -11,7 +13,10 @@ const Watch = ({ watch }) => {
           <p className="fs-5">Price: ৳{price}.00</p>
         </div>
         <button className="rounded-pill mb-2">
-          <p>Add To Cart</p>
+          <p className="mb-0">
+            Add To Cart
+            <FontAwesomeIcon icon={faCartShopping} />
+          </p>
         </button>
       </div>
     </div>

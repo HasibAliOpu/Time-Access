@@ -8,5 +8,18 @@
   height: 350px;
 }
 .watch-card button {
-  border: none;
+  background-color: aliceblue;
+  font-size: 18px;
+  height: 50px;
+  margin-bottom: 3px;
+  color: #1d9af2;
+  border: 1px solid #1d9af2;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.watch-card button:hover {
+  box-shadow: 2px 2px #53a7ea, 4px 4px #53a7ea, 6px 6px #53a7ea;
+  transform: translateX(-3px);
 }
