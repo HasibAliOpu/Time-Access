@@ -10,8 +10,8 @@ const Shop = () => {
   }, []);
   return (
     <div className="row w-100 mx-auto">
-      <div className="watch-container col-12 col-lg-9 bg-warning">
-        <div className="row">
+      <div className="watch-container col-12 col-lg-9">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
           {watches.map((watch) => (
             <Watch key={watch.id} watch={watch} />
           ))}
