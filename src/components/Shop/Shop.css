@@ -1,0 +1,25 @@
+.cart-container {
+  border-radius: 10px;
+}
+.choose-btn {
+  font-size: 18px;
+  font-weight: 500;
+  color: aliceblue;
+  border: none;
+  background-color: rgba(100, 148, 237, 0.644);
+  height: 40px;
+}
+.choose-btn:hover {
+  background-color: cornflowerblue;
+}
+.remove-btn {
+  font-size: 18px;
+  font-weight: 500;
+  color: aliceblue;
+  border: none;
+  background-color: thistle;
+  height: 40px;
+}
+.remove-btn:hover {
+  background-color: violet;
+}
